@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Combat : MonoBehaviour
 {
-    public GameObject targetObject;
+    [SerializeField] private GameObject targetObject;
 
 
     // Update is called once per frame

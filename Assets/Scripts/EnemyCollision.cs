@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyColliso : MonoBehaviour
 {
-    public string weaponTag = "Weapon";
+    [SerializeField] private string weaponTag = "Weapon";
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
