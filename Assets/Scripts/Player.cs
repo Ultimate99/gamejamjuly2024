@@ -16,12 +16,15 @@ public class Player : MonoBehaviour
     [SerializeField] private float gravityScale = 10f;
     [SerializeField] private float fallGravityScale = 50f;
     private bool grounded = true;
+    [SerializeField] private Transform groundCheck;
     private bool jump = false;
     private bool facingRight = true;
 
     [SerializeField] private float wallSlideSpeed = 2f;
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private LayerMask groundLayer;
+
     private bool isWallSliding = false;
 
     // Update is called once per frame
@@ -41,6 +44,10 @@ public class Player : MonoBehaviour
         {
             Flip();
         }
+
+        // Ground check
+        grounded = groundCheck.GetComponent<Collider2D>().IsTouchingLayers(groundLayer);
+
     }
 
     void FixedUpdate()
@@ -108,4 +115,14 @@ public class Player : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+
+    void OnDrawGizmos()
+    {
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheck.GetComponent<CircleCollider2D>().radius);
+        }
+    }
+
 }
