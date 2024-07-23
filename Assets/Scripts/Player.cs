@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     private bool grounded = true;
     [SerializeField] private Transform groundCheck;
     private bool jump = false;
-    private bool facingRight = true;
+    public bool facingRight = true;
 
     [SerializeField] private float wallSlideSpeed = 2f;
     [SerializeField] private Transform wallCheck;
@@ -76,14 +76,14 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Wall"))
         {
             grounded = true;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Wall"))
         {
             grounded = false;
         }
