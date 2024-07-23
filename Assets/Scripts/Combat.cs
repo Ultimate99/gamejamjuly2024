@@ -5,43 +5,44 @@ using UnityEngine;
 public class Combat : MonoBehaviour
 {
     [SerializeField] private GameObject targetObject;
+    [SerializeField] private float AttackDistanceX = 1.2f;
+    [SerializeField] private float AttackDistanceY = 0f;
+    [SerializeField] private float AttackRotationZ = 0f;
 
+    private Vector3 originalPosition;
 
+    private void Start()
+    {
+        if (targetObject != null)
+            originalPosition = targetObject.transform.localPosition;
+        else
+            Debug.LogError("Attach Target Object bro.");
+    }
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
-        {
-            RotateWeaponF();
-        }
+            AttackF();
         else if (Input.GetKeyUp(KeyCode.E))
-            RotateWeaponB();
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            targetObject.transform.localScale = new Vector3(1f, 4f, 1f);
-        }
-        else if (Input.GetKeyUp(KeyCode.Q))
-            targetObject.transform.localScale = new Vector3(1f, 1f, 1f);
-
+            AttackB();
     }
 
-    void RotateWeaponF()
+    void AttackF()
     {
         if (targetObject != null)
         {
-            float roatationAmount = -86;
-            targetObject.transform.Rotate(new Vector3(0, 0, roatationAmount));
+            targetObject.transform.localPosition = originalPosition + new Vector3(AttackDistanceX, AttackDistanceY, 0f);
+            targetObject.transform.Rotate(new Vector3(0, 0, AttackRotationZ));
         }
         else
             Debug.Log("Attach Target Object bro.");
-    }
-    void RotateWeaponB()
+    }    
+    void AttackB()
     {
         if (targetObject != null)
         {
-            float roatationAmount = 86;
-            targetObject.transform.Rotate(new Vector3(0, 0, roatationAmount));
+            targetObject.transform.localPosition  = originalPosition;
+            targetObject.transform.Rotate(new Vector3(0, 0, -AttackRotationZ));
         }
         else
             Debug.Log("Attach Target Object bro.");
