@@ -18,7 +18,7 @@ public class Combat : MonoBehaviour
         else
             Debug.LogError("Attach Target Object bro.");
     }
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
