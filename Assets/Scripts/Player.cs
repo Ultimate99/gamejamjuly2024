@@ -1,45 +1,70 @@
+using System;
 using UnityEngine;
 using Utils;
+using Utils.PowerupSystem;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] MovementControler movementControler;
+    [SerializeField] private MovementControler movementControler;
+    [SerializeField] int CurrentHealth = 6;
+    [SerializeField] int MaxiumumHealth = 6;
+    [SerializeField] Dash dashing;
 
-    float moveX;
-    bool grounded = true;
+    public event EventHandler<HealedEventArgs> Healed;
+    public event EventHandler<DamagedEventArgs> Damaged;
 
-    void Awake()
+    private void Update()
     {
-        movementControler.facingRight = true;
+        movementControler.time += Time.deltaTime;
+        movementControler.PlayerInput();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        moveX = Input.GetAxisRaw("Horizontal");
-        if (Input.GetKeyDown(KeyCode.Space))
+        movementControler.CheckCollisions();
+        
+        movementControler.HandleJump();
+        movementControler.HandleDirection();
+        movementControler.HandleGravity();
+        movementControler.WallSlide();
+        movementControler.Dashing();
+
+        movementControler.ApplyMovement();
+    }
+
+    public void Heal(int amount)
+    {
+        var newHealth = Math.Min(CurrentHealth + amount, MaxiumumHealth);
+        if (Healed != null)
+            Healed(this, new HealedEventArgs(newHealth - CurrentHealth));
+        CurrentHealth = newHealth;
+    }
+
+    public void Damage(int amount)
+    {
+        var newHealth = Math.Max(CurrentHealth - amount, 0);
+        if (Damaged != null)
+            Damaged(this, new DamagedEventArgs(CurrentHealth - newHealth));
+        CurrentHealth = newHealth;
+    }
+
+    public class HealedEventArgs : EventArgs
+    {
+        public HealedEventArgs(int amount)
         {
-            movementControler.jump = true;
+            Amount = amount;
         }
+
+        public int Amount { get; private set; }
     }
 
-    void FixedUpdate()
+    public class DamagedEventArgs : EventArgs
     {
-        movementControler.Move(moveX, grounded);
-    }
+        public DamagedEventArgs(int amount)
+        {
+            Amount = amount;
+        }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            grounded = true;
-        }
-    }
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            grounded = false;
-        }
+        public int Amount { get; private set; }
     }
 }
