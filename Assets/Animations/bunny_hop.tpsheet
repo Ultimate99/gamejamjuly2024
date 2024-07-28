@@ -1,0 +1,22 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:5b2a5b45ea016319c72f0d82f84cb038:7f5e3de02d589e04a3a4aaaeb44f71e4:ea36a2cdd6deb029fd996cdbf2193048$
+#
+:format=40300
+:texture=bunny_hop.png
+:size=1024x1024
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+bunny_hop1;1;119;303;271; 0.5;0; 0;0;0;0
+bunny_hop2;1;392;278;303; 0.5;0; 0;0;0;0
+bunny_hop3;1;697;311;326; 0.5;0; 0;0;0;0
+bunny_hop4;1;697;311;326; 0.5;0; 0;0;0;0
+bunny_hop5;314;754;341;269; 0.5;0; 0;0;0;0
+bunny_hop6;657;739;309;284; 0.5;0; 0;0;0;0
+bunny_hop7;1;119;303;271; 0.5;0; 0;0;0;0

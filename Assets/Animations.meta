@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 4c65f2959d3aa254385184b8816b0e29
+=======
+guid: 1a8e0201006e3c8469f65ddfad2cc04d
+>>>>>>> origin/combat-2
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
