@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 6ad2e94e5cc2e0f4b9b8acecd35d605e
-=======
 guid: a050ed591aa089641b33e78fc90d58d9
->>>>>>> origin/combat-2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -52,11 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  spritePixelsToUnits: 400
-=======
   spritePixelsToUnits: 100
->>>>>>> origin/combat-2
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,7 +93,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -115,8 +106,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-=======
->>>>>>> origin/combat-2
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -124,17 +113,10 @@ TextureImporter:
       name: Bunny_Hop_0
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
-        x: 400
-        y: 808
-        width: 400
-        height: 400
-=======
         x: 462
         y: 844
         width: 274
         height: 269
->>>>>>> origin/combat-2
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,13 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 4974b3e802c979446842d647cf05f76e
-      internalID: -812782762
-=======
       spriteID: 0cd8e8a4e70049a48b3a868917b62162
       internalID: -314052873
->>>>>>> origin/combat-2
       vertices: []
       indices: 
       edges: []
@@ -157,17 +134,10 @@ TextureImporter:
       name: Bunny_Hop_1
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
-        x: 0
-        y: 408
-        width: 400
-        height: 400
-=======
         x: 55
         y: 492
         width: 307
         height: 246
->>>>>>> origin/combat-2
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,13 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: b2774b9f98a0d2f4d96fec1cffcdbe3e
-      internalID: 503457192
-=======
       spriteID: a22fc702bb56f3e40bda8da69748f004
       internalID: -1296902776
->>>>>>> origin/combat-2
       vertices: []
       indices: 
       edges: []
@@ -190,17 +155,10 @@ TextureImporter:
       name: Bunny_Hop_2
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
-        x: 400
-        y: 408
-        width: 400
-        height: 400
-=======
         x: 438
         y: 448
         width: 318
         height: 256
->>>>>>> origin/combat-2
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,13 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: a400c9a706fff7c4a884391df146b240
-      internalID: 1075276015
-=======
       spriteID: 4535717c6c4c7384c8936673adae7162
       internalID: -2064127036
->>>>>>> origin/combat-2
       vertices: []
       indices: 
       edges: []
@@ -223,17 +176,10 @@ TextureImporter:
       name: Bunny_Hop_3
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
-        x: 800
-        y: 408
-        width: 400
-        height: 400
-=======
         x: 839
         y: 489
         width: 295
         height: 246
->>>>>>> origin/combat-2
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,13 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: c100c52b343195746b84d29223067d76
-      internalID: -1399477277
-=======
       spriteID: d1e9b21e71be0e747b53d9087befc053
       internalID: -810836454
->>>>>>> origin/combat-2
       vertices: []
       indices: 
       edges: []
@@ -256,17 +197,10 @@ TextureImporter:
       name: Bunny_Hop_4
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
-        x: 0
-        y: 8
-        width: 400
-        height: 400
-=======
         x: 59
         y: 78
         width: 297
         height: 246
->>>>>>> origin/combat-2
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,13 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: c4ff7fff4ff558f448f7b5ed785c76b3
-      internalID: 565711515
-=======
       spriteID: f419190af98331e4d9df8ca4bdbb8e22
       internalID: -1034373274
->>>>>>> origin/combat-2
       vertices: []
       indices: 
       edges: []
@@ -289,17 +218,10 @@ TextureImporter:
       name: Bunny_Hop_5
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
-        x: 400
-        y: 8
-        width: 400
-        height: 400
-=======
         x: 463
         y: 69
         width: 268
         height: 278
->>>>>>> origin/combat-2
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,13 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 83b6caf01690745448c73fecbaa6022a
-      internalID: -1534849338
-=======
       spriteID: 85ca43caa9cbb5848b6f98a68094026c
       internalID: 56452562
->>>>>>> origin/combat-2
       vertices: []
       indices: 
       edges: []
@@ -322,17 +239,10 @@ TextureImporter:
       name: Bunny_Hop_6
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
-        x: 800
-        y: 8
-        width: 400
-        height: 400
-=======
         x: 868
         y: 66
         width: 296
         height: 253
->>>>>>> origin/combat-2
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,13 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 3f4f9778ad6ee84479f976ebb5be6aa0
-      internalID: -1317043971
-=======
       spriteID: 62a6e0c7871248b4aa0879b0cb7627c6
       internalID: -881509864
->>>>>>> origin/combat-2
       vertices: []
       indices: 
       edges: []
@@ -362,15 +267,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-<<<<<<< HEAD
-      Bunny_Hop_0: -812782762
-      Bunny_Hop_1: 503457192
-      Bunny_Hop_2: 1075276015
-      Bunny_Hop_3: -1399477277
-      Bunny_Hop_4: 565711515
-      Bunny_Hop_5: -1534849338
-      Bunny_Hop_6: -1317043971
-=======
       Bunny_Hop_0: -314052873
       Bunny_Hop_1: -1296902776
       Bunny_Hop_10: -683647350
@@ -392,7 +288,6 @@ TextureImporter:
       Bunny_Hop_7: 1730441380
       Bunny_Hop_8: 500851961
       Bunny_Hop_9: 689850603
->>>>>>> origin/combat-2
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

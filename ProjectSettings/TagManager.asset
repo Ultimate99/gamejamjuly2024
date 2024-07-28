@@ -6,14 +6,11 @@ TagManager:
   tags:
   - Ground
   - Wall
-<<<<<<< HEAD
-  - Light
-=======
   - Enemy
   - DeathWall
   - Weapon
   - W
->>>>>>> origin/combat-2
+  - Light
   layers:
   - Default
   - TransparentFX
@@ -22,13 +19,8 @@ TagManager:
   - Water
   - UI
   - Wall
-<<<<<<< HEAD
-  - Player
   - 
-=======
-  - Ground
-  - Weapon
->>>>>>> origin/combat-2
+  - 
   - 
   - 
   - 
