@@ -12,6 +12,7 @@ public class EnemyPathing : MonoBehaviour
     private Transform currentPoint;
     private bool isGrounded = true;
     private bool isKB = false;
+    private bool facingRight = true;
 
 
     void Start()
@@ -35,10 +36,16 @@ public class EnemyPathing : MonoBehaviour
             rb.velocity = new Vector2(-speed, 0);
 
         if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
+        {
             currentPoint = pointA.transform;
-
+            Flip();
+        }
+            
         if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
+        {
             currentPoint = pointB.transform;
+            Flip();
+        }
     }
 
     private void OnDrawGizmos()
@@ -67,6 +74,14 @@ public class EnemyPathing : MonoBehaviour
     public void SetKnockedBack(bool knockedBack)
     {
         isKB = knockedBack;
+    }
+
+    private void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 
 }

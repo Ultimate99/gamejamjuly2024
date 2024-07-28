@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     private float moveX;
     private Vector3 v = Vector3.zero;
 
+    public Animator animator;
+
 
     [SerializeField] private float jumpHeight = 4f;
     [SerializeField] private float gravityScale = 10f;
@@ -31,6 +33,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         moveX = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("Speed", Mathf.Abs(moveX));
         if (Input.GetKeyDown(KeyCode.Space) && (grounded || isWallSliding))
         {
             jump = true;
@@ -47,7 +50,6 @@ public class Player : MonoBehaviour
 
         // Ground check
         grounded = groundCheck.GetComponent<Collider2D>().IsTouchingLayers(groundLayer);
-
     }
 
     void FixedUpdate()
@@ -116,13 +118,13 @@ public class Player : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    void OnDrawGizmos()
+  /*  void OnDrawGizmos()
     {
         if (groundCheck != null)
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(groundCheck.position, groundCheck.GetComponent<CircleCollider2D>().radius);
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheck.GetComponent<BoxCollider2D>());
         }
-    }
+    }*/
 
 }
