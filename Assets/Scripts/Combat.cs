@@ -8,8 +8,13 @@ public class Combat : MonoBehaviour
     [SerializeField] private float AttackDistanceX = 1.2f;
     [SerializeField] private float AttackDistanceY = 0f;
     [SerializeField] private float AttackRotationZ = 0f;
+    [SerializeField] private Animator animator;
+    [SerializeField] private GameObject weaponHitBox;
 
     private Vector3 originalPosition;
+    public bool isAttacking = false;
+    public bool empAtttack = false;
+    
 
     private void Start()
     {
@@ -22,9 +27,34 @@ public class Combat : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
+        {
+            isAttacking = true;
+            weaponHitBox.SetActive(true);
+            animator.SetBool("Attack", isAttacking);
             AttackF();
+        } 
         else if (Input.GetKeyUp(KeyCode.E))
+        {
+            isAttacking = false;
+            weaponHitBox.SetActive(false);
+            animator.SetBool("Attack", isAttacking);
             AttackB();
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            empAtttack = true;
+            weaponHitBox.SetActive(true);
+            animator.SetBool("Attack_Emp", empAtttack);
+            AttackF();
+        }        
+        else if (Input.GetKeyUp(KeyCode.F))
+        {
+            empAtttack = false;
+            weaponHitBox.SetActive(false);
+            animator.SetBool("Attack_Emp", empAtttack);
+            AttackB();
+        }
     }
 
     void AttackF()

@@ -37,6 +37,8 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && (grounded || isWallSliding))
         {
             jump = true;
+            animator.SetBool("isJump", true);
+
         }
 
         if(moveX > 0 && !facingRight)
@@ -62,6 +64,7 @@ public class Player : MonoBehaviour
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jump = false;
+            animator.SetBool("isJump", false);
         }
         if (rb.velocity.y >= 0)
         {

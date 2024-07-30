@@ -15,6 +15,10 @@ public class EnemyColliso : MonoBehaviour
     private Vector2 KB_Direction;
     private bool applyKB;
     private EnemyPathing enemyPath;
+    private Combat combat;
+
+    public Animator animator;
+    private bool isAttacking = false;
 
     private void Start()
     {
@@ -41,17 +45,16 @@ public class EnemyColliso : MonoBehaviour
             if(HP <= 0)
                 Destroy(gameObject);
         }
-        else if (collision.collider.CompareTag(playerTag))
+        else if (collision.collider.CompareTag(playerTag) && combat.isAttacking)
         {
-                Debug.Log("BANG");
-                KB_Direction = (transform.position - collision.transform.position).normalized;
-                applyKB = true;
-                enemyPath.SetKnockedBack(true);
-                StartCoroutine(EndKnockback());
-                Debug.Log("Knockback direction: " + KB_Direction);
+            Debug.Log("BANG");
+            KB_Direction = (transform.position - collision.transform.position).normalized;
+            applyKB = true;
+            enemyPath.SetKnockedBack(true);
+            StartCoroutine(EndKnockback());
+            Debug.Log("Knockback direction: " + KB_Direction);
         }
     }
-
 
     private void FixedUpdate()
     {

@@ -10,6 +10,7 @@ TagManager:
   - DeathWall
   - Weapon
   - W
+  - Bear
   layers:
   - Default
   - TransparentFX
@@ -20,9 +21,9 @@ TagManager:
   - Wall
   - Ground
   - Weapon
-  - 
-  - 
-  - 
+  - Player
+  - InvWall
+  - AttackRange
   - 
   - 
   - 
